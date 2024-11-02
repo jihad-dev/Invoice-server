@@ -25,7 +25,7 @@ async function run() {
   const InfoCollection = client.db("InvoiceFinalDB").collection("Information");
   const ProformaCollection = client.db("InvoiceFinalDB").collection("Proforma");
   try {
-    await client.connect();
+    // await client.connect();
 
     // informatino post route //
     app.post("/information", async (req, res) => {
@@ -127,10 +127,10 @@ async function run() {
       }
     });
 
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
+    // await client.db("admin").command({ ping: 1 });
+    // console.log(
+    //   "Pinged your deployment. You successfully connected to MongoDB!"
+    // );
   } finally {
   }
 }
